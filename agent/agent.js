@@ -8,7 +8,7 @@ const agent = function () {
 };
 
 agent.prototype = {
-  constructor: EventTarget,
+  constructor: agent,
 
   /**
    * @description 添加代理对象
