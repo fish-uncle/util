@@ -1,0 +1,29 @@
+coverage/
+
+*.sw*
+*.un~
+
+# IDEA Config
+/.idea/
+
+# log
+/logs/
+*.log
+*.pid
+
+# node_modules
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# mac
+/.DS_Store/
+
+#build
+/run/
+/.travis.yml
+/appveyor.yml
+/.next/
+/app/public/imgs/
+/app/public/js/
+/app/public/favicon.ico
