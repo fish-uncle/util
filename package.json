@@ -1,0 +1,26 @@
+{
+  "name": "@fish/util",
+  "version": "1.0.0",
+  "description": "util",
+  "main": "dist/index.js",
+  "keywords": [
+    "util"
+  ],
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "author": "fish uncle",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.shenzhepei.com"
+  }
+}

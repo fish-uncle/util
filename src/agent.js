@@ -1,11 +1,11 @@
 /**
  * @method agent
  * @description 代理，观察者
+ *
  */
-
 const agent = function () {
-  this.handlers = {};
-};
+  this.handlers = {}
+}
 
 agent.prototype = {
   constructor: agent,
@@ -13,9 +13,9 @@ agent.prototype = {
   /**
    * @description 添加代理对象
    */
-  addHandler: function (type, handler) {
+  $on: function (type, handler) {
     if (typeof this.handlers[type] === "undefined") {
-      this.handlers[type] = [];
+      this.handlers[type] = []
     }
     this.handlers[type].push(handler)
   },
@@ -23,14 +23,14 @@ agent.prototype = {
   /**
    * @description 触发代理
    */
-  fire: function (event) {
+  $once: function (event) {
     if (!event.target) {
-      event.target = this;
+      event.target = this
     }
     if (this.handlers[event.type] instanceof Array) {
-      let handlers = this.handlers[event.type], i, len;
+      let handlers = this.handlers[event.type], i, len
       for (i = 0, len = handlers.length; i < len; i++) {
-        handlers[i](event);
+        handlers[i](event)
       }
     }
   },
@@ -38,15 +38,17 @@ agent.prototype = {
   /**
    * @description 移除代理对象
    */
-  removeHandler: function (type, handler) {
+  $off: function (type, handler) {
     if (this.handlers[type] instanceof Array) {
-      let handlers = this.handlers[type], i, len;
+      let handlers = this.handlers[type], i, len
       for (i = 0, len = handlers.length; i < len; i++) {
         if (handlers[i] === handler) {
-          break;
+          break
         }
       }
-      handlers.splice(i, 1);
+      handlers.splice(i, 1)
     }
   }
-};
+}
+
+export default agent

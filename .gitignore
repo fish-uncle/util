@@ -1,29 +1,50 @@
-coverage/
+# Built application files
+*.apk
+*.ap_
 
-*.sw*
-*.un~
+# Files for the Dalvik VM
+*.dex
 
-# IDEA Config
-/.idea/
+# Generated files
+*/bin/
+*/gen/
+*/out/
 
-# log
-/logs/
+# Log Files
 *.log
-*.pid
 
-# node_modules
-/node_modules/
-npm-debug.log
-yarn-error.log
+# Android Studio
+.navigation/
+captures/
 
-# mac
-/.DS_Store/
+# idea
+*/.idea/
+.idea/
+*.iml
+*/*.iml
 
-#build
-/run/
-/.travis.yml
-/appveyor.yml
-/.next/
-/app/public/imgs/
-/app/public/js/
-/app/public/favicon.ico
+# eclipse
+.project
+.factorypath
+.classpath
+.settings/
+target/
+logs/
+
+# web
+dist/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# others
+*/.DS_Store
+.DS_Store
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
